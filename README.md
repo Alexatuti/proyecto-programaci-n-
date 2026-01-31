@@ -29,7 +29,3 @@ menús interactivos en consola y utiliza archivos CSV para el almacenamiento de 
 1. Compilar el archivo `main.cpp`
 2. Ejecutar el programa desde la consola
 3. Utilizar el menú para acceder a las funcionalidades
-
-## Autor
-Estudiante de Ingeniería en Sistemas de Información  
-Escuela Politécnica Nacional
