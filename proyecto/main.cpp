@@ -5,7 +5,7 @@
 #include <string>
 #include <sstream>
 #include <locale.h>
-#include <limits> 
+#include <limits>
 
 using namespace std;
 
@@ -14,7 +14,7 @@ float convertirNota(const string& s) {
     try {
         return stof(s);
     } catch (...) {
-        return -1;  // valor inválido
+        return -1;  
     }
 }
 
@@ -22,7 +22,7 @@ float convertirNota(const string& s) {
 string notas[100][100];
 int totalNotas = 0;
 
-void cargarNotas() {  //en chat gpt  4 modificar 
+void cargarNotas() {  
     ifstream archivo("notas.csv");
     string linea;
     totalNotas = 0;
@@ -52,7 +52,7 @@ void mostrarNotas() {
 
 
 
-void mostrarNotasOrdenadas() { /// se agregó
+void mostrarNotasOrdenadas() { 
     cout << "\n--- LISTA DE NOTAS ORDENADAS ---\n";
     for (int i = 0; i < totalNotas; i++) {
         for (int j = 0; j < 9; j++)
@@ -212,7 +212,7 @@ void actualizarInvestigacion() {
 
 
 
-void menuInvestigaciones() { //recien agg
+void menuInvestigaciones() { 
     int opcion;
     do {
         cout << "\n--- INVESTIGACIONES ---\n";
@@ -237,7 +237,7 @@ void menuInvestigaciones() { //recien agg
 
 
 
-void buscarPorCedula() { //se agregó
+void buscarPorCedula() { 
     cargarNotas();
     string cedula;
     bool encontrado = false;
@@ -260,7 +260,7 @@ void buscarPorCedula() { //se agregó
     }
 }
 
-void buscarPorCodigo() { // se agregó
+void buscarPorCodigo() { 
     cargarNotas();
     string codigo;
     bool encontrado = false;
@@ -284,7 +284,7 @@ void buscarPorCodigo() { // se agregó
 }
 
 
-void buscarPorNombre() { // se agregó
+void buscarPorNombre() { 
     cargarNotas();
     string nombre;
     bool encontrado = false;
@@ -309,7 +309,7 @@ getline(cin, nombre);
 }
 
 
-void buscarPorMateria() { // se agregó
+void buscarPorMateria() { 
     cargarNotas();
     string materia;
     bool encontrado = false;
@@ -388,8 +388,8 @@ void buscarPorCorreoElectronico() {
 
 
 
-// ORDENAMIENTOS 
- void ordenarNombreAZ() { // se sgregó
+// ORDENAR
+ void ordenarNombreAZ() { 
     cargarNotas();
     for (int i = 0; i < totalNotas - 1; i++) {
         for (int j = i + 1; j < totalNotas; j++) {
@@ -402,7 +402,7 @@ void buscarPorCorreoElectronico() {
      mostrarNotasOrdenadas();
 }
 
-void ordenarNombreZA() { // se agregó
+void ordenarNombreZA() { 
     cargarNotas();
     for (int i = 0; i < totalNotas - 1; i++) {
         for (int j = i + 1; j < totalNotas; j++) {
@@ -416,7 +416,7 @@ void ordenarNombreZA() { // se agregó
 }
 
 
-void ordenarNotaAsc() { // recien agg
+void ordenarNotaAsc() { 
     cargarNotas();
     for (int i = 0; i < totalNotas - 1; i++) {
         for (int j = i + 1; j < totalNotas; j++) {
@@ -431,7 +431,7 @@ void ordenarNotaAsc() { // recien agg
 }
 
 
-void ordenarNotaDesc() { // recien agg
+void ordenarNotaDesc() { 
     cargarNotas();
     for (int i = 0; i < totalNotas - 1; i++) {
         for (int j = i + 1; j < totalNotas; j++) {
@@ -445,7 +445,7 @@ void ordenarNotaDesc() { // recien agg
     mostrarNotasOrdenadas();  
 }
 
-void ordenarMateria() { //recien agg
+void ordenarMateria() { 
     cargarNotas();
     for (int i = 0; i < totalNotas - 1; i++) {
         for (int j = i + 1; j < totalNotas; j++) {
@@ -462,7 +462,7 @@ void ordenarMateria() { //recien agg
 
    
    
-void menuBusquedasNotas() {// revisar 
+void menuBusquedasNotas() {
     int op;
     do {
         cout << "\n--- BUSQUEDAS DE NOTAS ---\n";
@@ -489,7 +489,7 @@ void menuBusquedasNotas() {// revisar
 
 
 
-void menuOrdenamientosNotas() { //recien agregado
+void menuOrdenamientosNotas() { 
     int op;
     do {
         cout << "\n--- ORDENAMIENTOS DE NOTAS ---\n";
@@ -608,7 +608,7 @@ void eliminarNota() {
 
 
 
-void MenuNotas() { // recien agtregado 
+void MenuNotas() { 
     int op;
     do {
         cout << "\n--- MENU NOTAS ---\n";
@@ -647,7 +647,7 @@ int main() {
         cin >> opcion;
 
         switch (opcion) {
-        case 1: MenuNotas(); break;            // ✅ MENÚ COMPLETO
+        case 1: MenuNotas(); break;            
         case 2: menuInvestigaciones(); break;
         case 3: cout << "Saliendo...\n"; break;
         default: cout << "Opcion invalida\n";
@@ -656,6 +656,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
